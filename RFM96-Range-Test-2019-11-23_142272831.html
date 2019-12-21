@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ICL Rocketry Wiki : RFM96 Range Test 2019-11-23</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">ICL Rocketry Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="ICL-Rocketry-Wiki-Home_142270843.html">ICL Rocketry Wiki Home</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="142271011.html">Electronics &amp; Payload Team</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Test-Logs_149336890.html">Test Logs</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            ICL Rocketry Wiki : RFM96 Range Test 2019-11-23
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Kacker, Shreeyam</span>, last modified by <span class='editor'> Bella, Daniele V</span> on Dec 07, 2019
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <div class="contentLayout2">
+<div class="columnLayout single" data-layout="single">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<h2 id="RFM96RangeTest2019-11-23-GeneralInformation">General Information</h2><h3 id="RFM96RangeTest2019-11-23-TeamMembersPresent">Team Members Present</h3><ul><li>Shreeyam Kacker</li><li>Luis Marques</li><li>Daniele Bella</li></ul><p>Travelled distance: 1000m</p><p>Link budget (Rx sensitivity): -148 dBm</p><p>Initial RSSI: -24 dBm</p><p>Tx power: 20 dBm (0.1 W)</p><p><br/></p><p><br/></p></div>
+</div>
+</div>
+<div class="columnLayout single" data-layout="single">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<h2 id="RFM96RangeTest2019-11-23-Method">Method</h2><p>It was a cloudy and somewhat miserable looking afternoon, as the members entered the Wormwood Scrubs park. The transmitter was given to Shreeyam and Luis, whilst Daniele used his laptop to monitor the receiver. After a brief test to make sure everything was still working, and to find the RSSI at zero distance, the transmitter and receiver were turned on, and the two groups walked away from each other in opposite directions.</p><p>Daniele was simultaneously holding a netbook, an umbrella, and a jumbled mess of wires that was the packet receiver, so he stopped at a nearby bench soon after. That bench had coordinates 51.52025N, 0.24689W.</p><p>Meanwhile, Shreeyam and Luis kept on walking, until they reached the end of the park at coordinates 51.522640, -0.232961. Afterwards, they switched off the transmitter and walked back to meet Daniele at the bench.</p></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<h2 id="RFM96RangeTest2019-11-23-Results">Results</h2><p>The final positions, by complete and utter coincidence, happen to be exactly 1000m apart.</p><p>For the analysis, the distance for each packet was calculated by assuming that both groups walked at the same speed.</p><p>This lead to the graph found to the right.</p><p>The curve of best fit for the lower flat section has the equation:</p><p>$RSSI=-(\log_{10}(1.306\times10^7 d + 1.601\times10^{10}))^2$</p><p><br/></p><p>where $d$ is the distance.</p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" width="600" src="attachments/142272831/142274262.png" data-image-src="attachments/142272831/142274262.png" data-unresolved-comment-count="0" data-linked-resource-id="142274262" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Final.png" data-base-url="https://wiki.imperial.ac.uk" data-linked-resource-content-type="image/png" data-linked-resource-container-id="142272831" data-linked-resource-container-version="6"></span></p><p><br/></p></div>
+</div>
+</div>
+<div class="columnLayout two-right-sidebar" data-layout="two-right-sidebar">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<h2 id="RFM96RangeTest2019-11-23-AnalysisandDiscussion">Analysis and Discussion</h2><p>The table to the right shows some values of the RSSI obtained using the curve of best fit. The values that are obtained are more optimistic than my study plan.</p><p>Doubling the distance should lead to half of the transmission power. Thus, it should lead to a difference of $20\log_{10}(\frac{1}{2}) = 3$ dBm. However, in our case, doubling the distance  leads to about a 3.5 dB drop. This is quite optimistic.</p><p>The prediction also puts the max range of the antenna at over 60 km. This is probably wrong.</p><p>This is likely due to the data having a bizarre distribution, as seen in the graph.</p><p>The &quot;kink&quot; is likely due to the transmitter and receiver both moving away from each other at the start of the experiment. This was corrected using the code by setting doubling the speed before the kink, but it didn't help much.</p><p>The &quot;kink&quot; also led to the curve of best fit being found only for the latter half of the experiment.</p><p>The noise in the data is partly due to the fact that the members were holding the antennas in their hands, trying to keep it upwards. This lead to inconsistency in how the antenna was held, and in its height above the ground.</p><h3 id="RFM96RangeTest2019-11-23-LessonsLearnt">Lessons Learnt</h3><ul><li>Orientation of the antennas should be accurately controlled</li><li>Receiver should stay stationary</li><li>Transmitter and altimeter height should not vary significantly</li></ul></div>
+</div>
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<div class="table-wrap"><table class="wrapped confluenceTable"><colgroup><col/><col/></colgroup><tbody><tr><th style="text-align: center;" class="confluenceTh">Distance (km)</th><th style="text-align: center;" class="confluenceTh">Best Fit Predicted RSSI (dBm)</th></tr><tr><td class="confluenceTd">0.5</td><td class="confluenceTd">-107.2</td></tr><tr><td class="confluenceTd">1.0</td><td class="confluenceTd">-109.48</td></tr><tr><td class="confluenceTd">1.5</td><td class="confluenceTd">-111.3</td></tr><tr><td class="confluenceTd">2.0</td><td class="confluenceTd">-112.9</td></tr><tr><td class="confluenceTd">2.5</td><td class="confluenceTd">-114.2</td></tr><tr><td class="confluenceTd">3.0</td><td class="confluenceTd">-115.4</td></tr><tr><td class="confluenceTd">60.0</td><td class="confluenceTd">-141.7</td></tr></tbody></table></div></div>
+</div>
+</div>
+<div class="columnLayout single" data-layout="single">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<h2 id="RFM96RangeTest2019-11-23-RawdataandCode">Raw data and Code</h2><h3 id="RFM96RangeTest2019-11-23-Rawdata">Raw data</h3><p><a href="attachments/142272831/142274263.txt" data-linked-resource-id="142274263" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="rawRadioData.txt" data-nice-type="Text File" data-linked-resource-content-type="text/plain" data-linked-resource-container-id="142272831" data-linked-resource-container-version="6">rawRadioData.txt</a> was directly obtained from the serial monitor.</p><p><a href="attachments/142272831/142274264.txt" data-linked-resource-id="142274264" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="uncorruptedRadioData.txt" data-nice-type="Text File" data-linked-resource-content-type="text/plain" data-linked-resource-container-id="142272831" data-linked-resource-container-version="6">uncorruptedRadioData.txt</a> contains the raw data edited to remove corrupted data packets and startup sequence of ESP32. The latter was perhaps not necessary due to how the code was written, but was done as a precaution.</p><h3 id="RFM96RangeTest2019-11-23-Code">Code</h3><h4 id="RFM96RangeTest2019-11-23-ESP32codeused">ESP32 code used</h4><p><a href="attachments/142272831/142274268.ino" data-linked-resource-id="142274268" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="LoRaSenderMod.ino" data-linked-resource-content-type="application/octet-stream" data-linked-resource-container-id="142272831" data-linked-resource-container-version="6">LoRaSenderMod.ino</a> and <a href="attachments/142272831/142274267.ino" data-linked-resource-id="142274267" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="LoRaReceiverBasic.ino" data-linked-resource-content-type="application/octet-stream" data-linked-resource-container-id="142272831" data-linked-resource-container-version="6">LoRaReceiverBasic.ino</a> were run on the transmitter and receiver respectively during the test.</p><h4 id="RFM96RangeTest2019-11-23-Dataanalysis">Data analysis</h4><p><a href="attachments/142272831/142274265.py" data-linked-resource-id="142274265" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="radioAnalysis.py" data-linked-resource-content-type="application/octet-stream" data-linked-resource-container-id="142272831" data-linked-resource-container-version="6">radioAnalysis.py</a> was written in Python to import the raw data, remove extraneous sections, find the line of best fit, and plot the graph. It uses Python 3.8.0, numpy 1.17.4, and matplotlib 3.1.1.</p></div>
+</div>
+</div>
+</div>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/142272831/142274261.svg">Final.svg</a> (image/svg+xml)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/142272831/142274262.png">Final.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/142272831/142274263.txt">rawRadioData.txt</a> (text/plain)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/142272831/142274264.txt">uncorruptedRadioData.txt</a> (text/plain)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/142272831/142274265.py">radioAnalysis.py</a> (application/octet-stream)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/142272831/142274266.ino">LoRaReceiverMod.ino</a> (application/octet-stream)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/142272831/142274267.ino">LoRaReceiverBasic.ino</a> (application/octet-stream)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/142272831/142274268.ino">LoRaSenderMod.ino</a> (application/octet-stream)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Dec 21, 2019 10:27</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
