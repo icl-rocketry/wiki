@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ICL Rocketry Wiki : Payload Structure for HMSS Sporadic Impulse</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">ICL Rocketry Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="ICL-Rocketry-Wiki-Home_142270843.html">ICL Rocketry Wiki Home</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="142271011.html">Electronics &amp; Payload</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            ICL Rocketry Wiki : Payload Structure for HMSS Sporadic Impulse
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Ferreira Da Silva Marques, Luis</span>, last modified on Feb 01, 2020
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="PayloadStructureforHMSSSporadicImpulse-THISPAGEWILLSERVEASADRAFT/LOGBOOKFORTHEDESIGNPROCESSOFTHEPAYLOADSTRUCTURE.WORKINPROGRESS.EVENTUALLY,ITWILLHOSTTHEFINALDESIGNuntilthen,whenindoubtask,,..."><strong>THIS PAGE WILL SERVE AS A DRAFT/LOGBOOK FOR THE DESIGN PROCESS OF THE PAYLOAD STRUCTURE. <u>WORK IN PROGRESS.</u><br/></strong><strong>EVENTUALLY, IT WILL HOST THE FINAL DESIGN</strong><br/>until then, when in doubt ask <a class="confluence-userlink user-mention" data-username="pm3118" href="https://wiki.imperial.ac.uk/display/~pm3118" data-linked-resource-id="98051030" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Mattoo, Palash</a> , <a class="confluence-userlink user-mention" data-username="lf1119" href="https://wiki.imperial.ac.uk/display/~lf1119" data-linked-resource-id="133253403" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Ferreira Da Silva Marques, Luis</a> , <a class="confluence-userlink user-mention" data-username="sk3815" href="https://wiki.imperial.ac.uk/display/~sk3815" data-linked-resource-id="60205000" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Kacker, Shreeyam</a>...</h2><p><br/></p><p>Quoting Sa Cup's rules:  &quot;Payload is defined as being replaceable with a ballast of the same mass, with <span style="color: rgb(255,0,0);"><u>no change to the launch vehicle’strajectory in reaching the target apogee, or its’ successful recovery</u></span>&quot;</p><p>We will have a Technology <span style="color: rgb(0,0,0);">Demonstration</span> Payload (3U) that will consist of mechanically compensating for the rocket's rotation to allow for a stable 360-degree recording of the flight (currently -&gt; <span>rotating plate on static shaft with cameras, plate controlled by motor and gears</span>). This technology as other applications such as blah blah blah ... (etc)</p><p>Shall be suitable to also enter SDL payload challenge.</p><p><br/><strong>Design constraints:</strong></p><ul><li><u>minimum payload mass 8.8lbs</u> (~4kg) - can have up to 2.25 lbs of &quot;boilerplate mass&quot;</li><li>bonus points are awarded for following CubeSat standard</li><li>needs to be able to be <u>weighed independently of launch vehicle</u></li><li>can't contain significant quantities of lead or hazardous materials</li><li>*ideally, COM in all 3 axes is &quot;close&quot; to the geometric center*</li><li>*rail with &gt;8.5mm*</li><li>vehicle must have COTS barometric pressure altimeter with on-board data storage</li><li>shall carry a radio beacon or similar transmitter to aid locatting</li></ul><p><br/></p><p><br/></p><p><br/></p><p><span class="confluence-embedded-file-wrapper image-right-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-right" width="500" src="attachments/149347488/149347489.jpg" data-image-src="attachments/149347488/149347489.jpg" data-unresolved-comment-count="0" data-linked-resource-id="149347489" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="yeet.jpg" data-base-url="https://wiki.imperial.ac.uk" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="149347488" data-linked-resource-container-version="10"></span></p><p>Note: any constraint with a &quot;*&quot; is not Sa Cup requirement but rather a design preference following &quot;CubeSat Desing Specification&quot; by CalPoly (used by Nasa's CSLI). ← extra bueno if we can also follow these</p><p><br/><strong>Current challenges/notes</strong>: (yeah I know organization much)</p><ul><li>find a suitable way to firmly connect the shaft and prevent sliding (grub screw, keyway, nut with cap, lock nut...); <u>clamp + lock nut if we have enough space</u></li><li>deciding which gear mechanism to use (vertical/horizontal......) or even another option to mechanically controlling rotation</li><li>the stackable electronics boards (similar to PC104) will be made in house </li><li>(backlash will be assumed as non-existent)</li><li>way to change PC104 height? currently, rails can do threaded or not /// can friction fit PC104 through L bars without rails, more permanent option, easier assembly</li><li>do FEA of final structure (get SF for critical components)(ANSYS)??? calculate natural frequencies?????? fastener analysis????? (might be overkill/not doable needs further research)</li><li>considering to have electronics/batteries split between both the top and bottom U</li><li>payload rotation is prevented by mounts to the body tube</li><li><span>better to have a separate battery for the motor?</span></li><li><span>read reports from other teams</span></li><li><span>figure out why sometimes motor doesn't like to turn on</span></li><li><span>works fine upside down, has unexpected drift in &quot;wiggle motion&quot;</span></li><li><span>we can make the motor circuit part of the bottom U and connect it by wires to the motor</span></li><li>...</li></ul><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><div class="table-wrap"><table class="relative-table wrapped confluenceTable" style="width: 33.0785%;"><colgroup><col style="width: 34.1895%;"/><col style="width: 21.2211%;"/><col style="width: 17.0105%;"/><col style="width: 27.2842%;"/></colgroup><tbody><tr><th style="text-align: center;" class="confluenceTh">Components</th><th style="text-align: center;" class="confluenceTh">Quantity</th><th style="text-align: center;" class="confluenceTh">Mass per unit (grams)</th><th style="text-align: center;" class="confluenceTh"><div class="content-wrapper"><p>Components' Mass</p></div></th></tr><tr><td class="confluenceTd">GoPro's (hero3 silver- 59x21(29)x41 mm)</td><td class="confluenceTd">x4</td><td class="confluenceTd">75</td><td class="confluenceTd"><br/></td></tr><tr><td class="confluenceTd">Shaft</td><td class="confluenceTd">x1</td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td></tr><tr><td class="confluenceTd">Stepper Motor</td><td class="confluenceTd">x1</td><td class="confluenceTd">221</td><td class="confluenceTd"><br/></td></tr><tr><td class="confluenceTd">Wires</td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td></tr><tr><td class="confluenceTd">Batteries</td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td></tr><tr><td class="confluenceTd">Gear Mechanism</td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td></tr><tr><td class="confluenceTd">Rails</td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td></tr><tr><td class="confluenceTd">L Bars</td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td></tr><tr><td class="confluenceTd">PC104</td><td class="confluenceTd">x4 (2 per U)</td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td></tr><tr><td class="confluenceTd">Fa<s>x</s>cts machine</td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td></tr><tr><td class="confluenceTd">10x10 plates</td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td><td class="confluenceTd"><br/></td></tr></tbody></table></div><p><br/></p><p><strong>Total mass: -/8.8 freedom units</strong></p><p><span class="confluence-embedded-file-wrapper image-right-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-right" width="400" src="attachments/149347488/149347490.jpg" data-image-src="attachments/149347488/149347490.jpg" data-unresolved-comment-count="0" data-linked-resource-id="149347490" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="82443122_1520297498120906_1822875160844173312_n.jpg" data-base-url="https://wiki.imperial.ac.uk" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="149347488" data-linked-resource-container-version="10"></span></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p>To Do by feb 5:</p><ul style="list-style-type: square;"><li>make a PCB to control the motor with (microcontroller chip, x2 9-axis imu, h bridge chip, power source, way to connect to motor)</li></ul><p><br/></p><p><br/></p><p><br/></p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/149347488/149347489.jpg">yeet.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/149347488/149347490.jpg">82443122_1520297498120906_1822875160844173312_n.jpg</a> (image/jpeg)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Feb 03, 2020 00:42</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

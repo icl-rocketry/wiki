@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ICL Rocketry Wiki : 2 Jan 2020 - Post Launch Review</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">ICL Rocketry Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="ICL-Rocketry-Wiki-Home_142270843.html">ICL Rocketry Wiki Home</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="142270857.html">Launch History &amp; Report</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            ICL Rocketry Wiki : 2 Jan 2020 - Post Launch Review
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Agrawal, Devansh</span>, last modified on Feb 03, 2020
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="id-2Jan2020-PostLaunchReview-Objectives/Plan+SummaryofOutcomes">Objectives/Plan + Summary of Outcomes</h2><ul style="list-style-type: square;"><li>Drone Recovery Test 1<ul style="list-style-type: square;"><li>First test flight for drone recovery method</li><li>No flight due to high winds.</li></ul></li><li>First hot test of Static Fire Test Rig (Glenfir)<ul style="list-style-type: square;"><li>Testing of integration and operation of test rig using a COTS solid motor</li><li>Successful test, despite challenges and need to modify set up on site. </li></ul></li><li>November Rocket Launch<ul style="list-style-type: square;"><li>To test recovery system using ejection caps + shear pins + egg timer</li><li>No flight due to high winds.</li></ul></li><li>(Optional) Parachute tow test<ul style="list-style-type: square;"><li>Not attempted due to lack of planning, preparation, and safety assessment. </li></ul></li></ul><p>Photos/Videos link: <a href="https://drive.google.com/drive/folders/14Fu587kC-fRvOnlSJxZhIO2YRJ097ro-?usp=drive_open" class="external-link" rel="nofollow">https://drive.google.com/drive/folders/14Fu587kC-fRvOnlSJxZhIO2YRJ097ro-?usp=drive_open</a></p><p><br/></p><h2 id="id-2Jan2020-PostLaunchReview-PostFlightDiscussionPoints:">Post Flight Discussion Points:</h2><ul><li>If we know the weather predictions have high winds, should we cancel the trip the day before?<ul><li>(Conclusion) No. </li><li>Just being on site means we learn a lot, mainly through discussing ideas with others on site. </li><li>Even things that don't fly get inspected, and the feedback is often useful.</li><li>Forecasts can be wrong</li><li>No monetary value to cancelling - the minibus is already booked</li></ul></li></ul><p><br/></p><h2 id="id-2Jan2020-PostLaunchReview-DetailsforHotTestofStaticFireTestRig">Details for Hot Test of Static Fire Test Rig</h2><ul><li>we did not inform EARS we were planning on doing this test prior to showing up. </li><li>When we arrived, we were told that the test rig <strong>must</strong> be vertical</li><li>We modified the rig by mounting the plate by clamping it in two tripods</li><li>We had this vetted by the range safety officers</li><li>Performed the test</li></ul><h3 id="id-2Jan2020-PostLaunchReview-Challenges:">Challenges:</h3><ul><li>Changing the motor grain tube was very time consuming</li><li>The rig is not designed to be vertically mounted, even though we managed. Some thoughts on the ease of making it adaptable between both options is warranted.<ul><li>Vertical to ensure the (motor + test sled)/(just motor) don't go flying</li></ul></li><li>DAQ did not connect to the phone, but by overriding some features we managed to make it work. </li><li>Noise level on DAQ prevented us from immediately processing the data and seeing a graph that worked. It was found later on.</li><li>No easy way to verify the working DAQ, or seeing a live plotting. </li><li>A post-processing python script should be made before the experiment so that the results can be immediately analysed. </li><li>Remote ignition using the ESP was not allowed. Used the RSO's ignition leads instead. Not problematic for this test, but for our tests we would like to know the time delay between hitting the button and the motor starting</li></ul><p><span style="font-size: 16.0px;font-weight: bold;letter-spacing: -0.006em;">Clarification on process for DAQ box</span></p><ul style="list-style-type: square;"><li>during testing, couldn't enter the logging mode</li><li>edited the code to by pass the activation as soon as it was plugged in</li><li>tested this by plugging it in, pushing on the load, and then seeing the load, </li><li>screw terminal wires came off when moving the daq</li><li>and so we replugged it and didn't do a new calibration curve</li><li>after the test, we did checked the data, but the data that came out looked like the noise of load cell not plugged in</li><li>afterwards, we took off the load cell, didn't undo the wiring and tested the load cell again, and this worked fine. which is weird</li><li>remote ignition denied, need to discuss if changes are needed</li></ul><h3 id="id-2Jan2020-PostLaunchReview-TodoonDAQ/software:">Todo on DAQ/software:</h3><ul><li>live plotting/streaming of data</li><li>better connection for load cells</li><li>better structured code</li><li>extra LED to show when writing to SD card</li><li>always take a micro-sd adaptor</li><li>add capacitors across unused terminals to lower noise.</li><li>Investigate the noisiness of data a bit more. </li></ul><p><br/></p><p><br/></p><h2 id="id-2Jan2020-PostLaunchReview-DetailsonDroneRecovery">Details on Drone Recovery</h2><ul style="list-style-type: square;"><li>good things:<ul style="list-style-type: square;"><li>since there is a large open space, comms shouldn't be hard</li></ul></li><li>hard things:<ul style="list-style-type: square;"><li>no hot glue</li><li>need fillets</li><li>root fillets (not needed?)</li><li>paint!</li><li>want a flight controller in the drone<ul style="list-style-type: square;"><li>we can have two fc communicating the position so it can come into the fpv view </li><li>tbs-flarm</li></ul></li><li>motor - needs to be not epoxied in, and reusable rocket</li><li>fin can alignment with laser cut</li><li>elasticated not needed</li><li>notch in body tube shouldn't be there</li></ul></li><li>next steps:<ul style="list-style-type: square;"><li>the sTicK: rungs and hooks </li><li>ground test of catching mech</li><li>gps thing</li></ul></li><li>team org:<ul style="list-style-type: square;"><li>nicole needs to chase on</li><li>responsible engineers</li><li>timescales are fine, but 2 weeks delayed</li><li>comms with the rest of the team, especially on rocketry</li><li>suggested to do saturday</li><li>need more comms but do you need a dedicated lead?</li><li>we meet once a week</li></ul></li></ul><p><br/></p><p><br/></p><h2 id="id-2Jan2020-PostLaunchReview-DetailsonParachute">Details on Parachute</h2><p>At the end we spent an hour or more discussing the recovery system with Andy and John. A few learning points:</p><ul><li>No chute release - no one seems to find them reliable</li><li>Length of shock cords to be balanced to form the V. The nose cone end must lie further down than the lower part of the rocket under the drogue chute. Then the main gets deployed off the nose cone end. </li><li>Parachute packaging tips (essentially just stuff it in, but shroud lines and shock cords can be stored on the outside of the bag using some elastic cord.</li><li>Ejection caps using centrifuge tubes in brass pipes. Reusable and reliable. <br/>(Embed the ejection charge in the middle of the centrifuge tube that has bp filled in it, and with wadding at the top to hold the BP in place so it can't shake around). </li><li>AV bay with dual rocket split is a classic method</li><li>Not all nylon screws are made equal. Every manufacturer and every batch can be different. Ground tests must be done using  screws from the same batch as those that will be flying.</li><li>Parachute has an apex, and the drogue attaches there to literally pull the main out. </li><li>Direction of ejection charge going off isn't important - ie. if the ejection effectively blows and stuffs the parachute deeper in a body tube that isn't strictly bad. </li><li>(there's much more but I can't remember at the moment)</li></ul><p><br/></p><h2 id="id-2Jan2020-PostLaunchReview-Attendees">Attendees</h2><ol><li>Dev</li><li>Sena</li><li>Cisco</li><li>Rafal</li><li>Filipos</li><li>Omar</li><li>Danielle</li><li>Nicole</li><li>Thomas</li><li>Michael</li><li>Ananya</li><li>Ming Jie</li></ol><p><br/></p><p>Driven by the amazing John</p><p>(note, he is keen on building his own rocket for next time)</p><h2 id="id-2Jan2020-PostLaunchReview-GoodContactsfromtheday">Good Contacts from the day</h2><ul><li>Andy </li><li>Andy (yes there were two Andy's, and they were both incredibly helpful)</li><li>John Timberlake</li></ul><h2 id="id-2Jan2020-PostLaunchReview-GoodPeopletolookinto">Good People to look into</h2><ul><li>Collin Rowe</li><li>Jim Jarvis - amazing carbon fibre stuff</li></ul><p><br/></p><p><br/></p><h2 id="id-2Jan2020-PostLaunchReview-Extranotes:">Extra notes:</h2><ul><li>DroneSoc booked the union minibus. Fuel was about £30 for the day</li><li>Some politics in the EARS committee</li><li>N2O bottles in EARS shed</li><li>other people might be keen on using the test stand. we should look into ways to helping people do that. </li></ul><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Feb 03, 2020 00:42</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

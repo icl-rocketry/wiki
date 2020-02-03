@@ -13,13 +13,13 @@
                     <div id="breadcrumb-section">
                         <ol id="breadcrumbs">
                             <li class="first">
-                                <span><a href="index_menu.html">ICL Rocketry Wiki</a></span>
+                                <span><a href="index.html">ICL Rocketry Wiki</a></span>
                             </li>
                                                     <li>
                                 <span><a href="ICL-Rocketry-Wiki-Home_142270843.html">ICL Rocketry Wiki Home</a></span>
                             </li>
                                                     <li>
-                                <span><a href="142271011.html">Electronics &amp; Payload Team</a></span>
+                                <span><a href="142271011.html">Electronics &amp; Payload</a></span>
                             </li>
                                                     <li>
                                 <span><a href="Hardware_149336894.html">Hardware</a></span>
@@ -42,18 +42,50 @@
     
         
         
-            Created by <span class='author'> Kacker, Shreeyam</span>, last modified by <span class='editor'> Bella, Daniele V</span> on Dec 14, 2019
+            Created by <span class='author'> Kacker, Shreeyam</span>, last modified on Feb 02, 2020
                         </div>
                     <div id="main-content" class="wiki-content group">
-                    <h2 id="DAQ-Firmware">Firmware</h2><p>Feasible tasks:</p><ul class="inline-task-list" data-inline-tasks-content-id="149333859"><li class="checked" data-inline-task-id="17"><span class="placeholder-inline-tasks">Test thermocouple readings (MAX31855, need to modify Adafruit library most likely)</span></li><li class="checked" data-inline-task-id="18"><span class="placeholder-inline-tasks">Test pressure taps (Use the ESP32's ADC to see if you can get readings)<br/></span></li><li class="checked" data-inline-task-id="24"><span class="placeholder-inline-tasks">Test SD card</span></li><li class="checked" data-inline-task-id="26">Test WiFi functionality, see if we can get data back that way</li><li data-inline-task-id="20"><span class="placeholder-inline-tasks">Test ADC and make sure we can take differential readings, and set gains for load cells</span></li><li class="checked" data-inline-task-id="21">Run i2c scanner, then test PCA9685 servo driver</li></ul>
+                    <h2 id="DAQ-"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="400" src="attachments/149333859/149352357.jpg" data-image-src="attachments/149333859/149352357.jpg" data-unresolved-comment-count="0" data-linked-resource-id="149352357" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="20200201_134759.jpg" data-base-url="https://wiki.imperial.ac.uk" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="149333859" data-linked-resource-container-version="28"></span></h2><h1 id="DAQ-PeripheralDetails">Peripheral Details</h1><p><strong><span style="color: rgb(0,0,0);">SSID: ICLR_DAQ</span></strong></p><p><strong><span style="color: rgb(0,0,0);">Password: rocketsAreCool!</span></strong></p><p><strong><span style="color: rgb(0,0,0);">Do not connect unless you are the test operator.</span></strong></p><h1 id="DAQ-IntegrationChecklist">Integration Checklist</h1><ul class="inline-task-list" data-inline-tasks-content-id="149333859"><li data-inline-task-id="51">Remove DAQ protective cover.</li><li data-inline-task-id="47">Format SD card and plug into DAQ. The DAQ will <strong>NOT </strong>ignite or record data unless an SD card is detected.</li></ul><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" width="582" src="attachments/149333859/149352354.jpg" data-image-src="attachments/149333859/149352354.jpg" data-unresolved-comment-count="0" data-linked-resource-id="149352354" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="20200201_134602.jpg" data-base-url="https://wiki.imperial.ac.uk" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="149333859" data-linked-resource-container-version="28"></span></p><ul class="inline-task-list" data-inline-tasks-content-id="149333859"><li data-inline-task-id="36">Set switches to '<strong>SAFE</strong>' position on the DAQ.</li></ul><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" width="582" src="attachments/149333859/149352351.jpg" data-image-src="attachments/149333859/149352351.jpg" data-unresolved-comment-count="0" data-linked-resource-id="149352351" data-linked-resource-version="3" data-linked-resource-type="attachment" data-linked-resource-default-alias="20200201_134417.jpg" data-base-url="https://wiki.imperial.ac.uk" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="149333859" data-linked-resource-container-version="28"></span></p><ul class="inline-task-list" data-inline-tasks-content-id="149333859"><li data-inline-task-id="38">Plug in load cell as shown below. (Black/Yellow - GND, Red - 3V3, White - +Signal, Green - -Signal).</li></ul><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="400" src="attachments/149333859/149352320.jpg" data-image-src="attachments/149333859/149352320.jpg" data-unresolved-comment-count="0" data-linked-resource-id="149352320" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="IMG_20200201_113731.jpg" data-base-url="https://wiki.imperial.ac.uk" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="149333859" data-linked-resource-container-version="28"></span></p><ul class="inline-task-list" data-inline-tasks-content-id="149333859"><li data-inline-task-id="39">Plug in ematch into top right port (polarity independent) while keeping switch to <strong>SAFE. </strong>Do <strong>NOT </strong>insert ematch into engine.</li></ul><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" width="582" src="attachments/149333859/149352355.jpg" data-image-src="attachments/149333859/149352355.jpg" data-unresolved-comment-count="0" data-linked-resource-id="149352355" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="20200201_133956.jpg" data-base-url="https://wiki.imperial.ac.uk" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="149333859" data-linked-resource-container-version="28"></span></p><ul class="inline-task-list" data-inline-tasks-content-id="149333859"><li data-inline-task-id="52">Fit protective case back on.</li><li data-inline-task-id="48">Plug in provided LiPo battery into white JST connector, and verify unit turns on via power LED.</li><li data-inline-task-id="40">Connect to web interface and go to http://192.168.4.1/status endpoint.</li><li data-inline-task-id="42">Toggle ematch to '<strong>ARM</strong>'  <strong>WITHOUT </strong>plugging it into the engine. Verify again that ematch does not trigger. Verify that continuity LED is <strong>ON </strong>(both be checked on status webpage). Toggle back to <strong>'SAFE'.</strong></li><li data-inline-task-id="43">Insert ematch into engine. Stand back a safe distance, and set safety switch to <strong>'ARM'</strong>. Ematch should not trigger if status has been checked in prior step.</li><li data-inline-task-id="44">Connect to web interface http://192.168.4.1/pyro, and press button when ready to fire engine. Data logging will start as soon as ematch has been ignited.</li></ul><h1 id="DAQ-DataFormat">Data Format</h1><p>Data format is CSV. The columns (left to right) are:</p><ol><li>Ambient temperature</li><li>Thermo 1 temperature</li><li>Thermo 2 temperature</li><li>Thermo 3 temperature</li><li>Thermo 4 temperature</li><li> Pressure transducer 1</li><li> Pressure transducer 2</li><li> Pressure transducer 3</li><li> Pressure transducer 4</li><li> Pressure transducer 5</li><li> Differential input 1</li><li> Differential input 2</li><li> Differential input 3</li><li> Differential input 4</li><li> Milliseconds since turned on</li><li> Ematch status</li></ol><p><br/></p><p>The approximate derivation for force:</p><p>Load cell output = 20mV/V = 20mV * (3.3 V operating voltage) * (Gain of 4) at 300 kg (2940 N). </p><p>= 264 mV output at 2940 N</p><p>= 8.97959184e-5 V/N</p><p>At 1.2 V, there are 2^23 counts =&gt; 6990506.67 counts/V</p><p>= 627.718967 counts/N conversion factor.</p><p>=&gt; F = (counts)/627.718967</p><p><br/></p>
                     </div>
 
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/149333859/149352320.jpg">IMG_20200201_113731.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/149333859/149352323.png">image2020-2-1_12-25-24.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/149333859/149352352.jpg">20200201_134417.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/149333859/149352353.jpg">20200201_134417.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/149333859/149352351.jpg">20200201_134417.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/149333859/149352354.jpg">20200201_134602.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/149333859/149352355.jpg">20200201_133956.jpg</a> (image/jpeg)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/149333859/149352357.jpg">20200201_134759.jpg</a> (image/jpeg)
+                                <br/>
+                                                    </div>
+                    </div>
                     
                                                       
                 </div>             </div> 
             <div id="footer" role="contentinfo">
                 <section class="footer-body">
-                    <p>Document generated by Confluence on Dec 21, 2019 10:27</p>
+                    <p>Document generated by Confluence on Feb 03, 2020 00:42</p>
                     <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
                 </section>
             </div>

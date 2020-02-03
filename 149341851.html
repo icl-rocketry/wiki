@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ICL Rocketry Wiki : Interim Log 21/01/2020</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">ICL Rocketry Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="ICL-Rocketry-Wiki-Home_142270843.html">ICL Rocketry Wiki Home</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="142271815.html">Airframe &amp; Recovery</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            ICL Rocketry Wiki : Interim Log 21/01/2020
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Harayama, Sena</span>, last modified on Jan 21, 2020
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>Key design progress and decisions:</p><ol><li>Discard the CO2 systems and move on to a fully BP ejection system<br/>(more on <a class="confluence-userlink user-mention" data-username="trg18" href="https://wiki.imperial.ac.uk/display/~trg18" data-linked-resource-id="93941012" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Gir, Tanvi</a> <a class="confluence-userlink user-mention" data-username="tu4418" href="https://wiki.imperial.ac.uk/display/~tu4418" data-linked-resource-id="96120891" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Ubgade, Tanmay</a> <a class="confluence-userlink user-mention" data-username="mw1318" href="https://wiki.imperial.ac.uk/display/~mw1318" data-linked-resource-id="98048835" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Wanot, Maya</a> <a class="confluence-userlink user-mention current-user-mention" data-username="dra16" href="https://wiki.imperial.ac.uk/display/~dra16" data-linked-resource-id="70157881" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Agrawal, Devansh</a> eventually put all info on the tradeoff analysis in some separate document)</li><li>Move on to the Tender Descender instead of using the Chute Release as the latter was banned by competition rules</li><li>Mount part of the payload into the nosecone</li><li>Discussion on whether we use the </li><li>Discussion needed on lower section of the airframe (discuss compatibility of interfaces and subcomponents again, review initial assumptions vs current design, investigate once more the potential for generative design on interfaces)</li></ol><p><br/></p><h1 id="InterimLog21/01/2020-Bottomsectioninterfacing">Bottom section interfacing</h1><p><a class="confluence-userlink user-mention" data-username="jmo2618" href="https://wiki.imperial.ac.uk/display/~jmo2618" data-linked-resource-id="98049673" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Oh, Jae</a> <a class="confluence-userlink user-mention" data-username="sgc19" href="https://wiki.imperial.ac.uk/display/~sgc19" data-linked-resource-id="133252537" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Cheung, Samuel</a> <a class="confluence-userlink user-mention" data-username="eb3817" href="https://wiki.imperial.ac.uk/display/~eb3817" data-linked-resource-id="78528843" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Brown, Edward</a> <a class="confluence-userlink user-mention" data-username="avv19" href="https://wiki.imperial.ac.uk/display/~avv19" data-linked-resource-id="127181380" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Vaze, Aaditi</a> <a class="confluence-userlink user-mention" data-username="ir519" href="https://wiki.imperial.ac.uk/display/~ir519" data-linked-resource-id="133253453" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Roy, Ishaan</a> <a class="confluence-userlink user-mention" data-username="im3518" href="https://wiki.imperial.ac.uk/display/~im3518" data-linked-resource-id="93926824" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Morgado Santos, Isaac</a> <a class="confluence-userlink user-mention" data-username="ff318" href="https://wiki.imperial.ac.uk/display/~ff318" data-linked-resource-id="96116243" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Fonseca, Francisco</a> <a class="confluence-userlink user-mention current-user-mention" data-username="dra16" href="https://wiki.imperial.ac.uk/display/~dra16" data-linked-resource-id="70157881" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Agrawal, Devansh</a> <a class="confluence-userlink user-mention" data-username="pt4918" href="https://wiki.imperial.ac.uk/display/~pt4918" data-linked-resource-id="98045681" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.imperial.ac.uk">Tzonev, Philip</a> </p><p>Engine connection to the lower body tube</p><p>&gt; transmit load through the body tube or directly into the feed casing?</p><p>lower engine flange diameter 6 inches</p><p>Top engine connection?</p><p>Updated feed casing section length 35 cm</p><p><br/></p><p><br/></p><p><br/></p>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Feb 03, 2020 00:42</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
